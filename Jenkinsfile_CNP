@@ -1,0 +1,9 @@
+#!groovy
+@Library("Infrastructure") _
+
+def product = "keda"
+def branchesToSync = ['demo', 'perftest', "ithc"]
+
+withInfraPipeline(product) {
+    syncBranchesWithMaster(branchesToSync)
+}
