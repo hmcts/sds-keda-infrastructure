@@ -4,4 +4,5 @@ This repo creates a Managed Identity in each environment for the Keda Operator t
 
 MI Name: keda-${var.env}-mi
 
+
 Found in rg: managed-identities-${var.env}-rg
