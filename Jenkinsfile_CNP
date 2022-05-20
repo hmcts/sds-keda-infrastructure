@@ -2,7 +2,7 @@
 @Library("Infrastructure") _
 
 def product = "keda"
-def branchesToSync = ['demo', 'perftest', "ithc"]
+def branchesToSync = ['demo', 'test', "ithc"]
 
 withInfraPipeline(product) {
     syncBranchesWithMaster(branchesToSync)
