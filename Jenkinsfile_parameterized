@@ -1,4 +1,4 @@
 @Library('Infrastructure') _
 
-withParameterizedInfraPipeline('toffee, 'sbox', 'sbox') {
+withParameterizedInfraPipeline('toffee', 'sbox', 'sbox') {
 }
