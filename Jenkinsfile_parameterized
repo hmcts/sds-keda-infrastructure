@@ -1,3 +1,5 @@
+#!groovy
+
 @Library('Infrastructure') _
 
 withParameterizedInfraPipeline('toffee', 'sbox', 'sbox') {
