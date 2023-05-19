@@ -4,6 +4,5 @@ resource "azurerm_user_assigned_identity" "managed_identity" {
   location            = var.location
 
   name = "${var.product}-${var.env}-mi"
-
   tags = var.common_tags
 }
