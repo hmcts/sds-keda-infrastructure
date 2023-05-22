@@ -4,6 +4,6 @@
 
 def expiresAfter = "3000-01-01"
 
-withParameterizedInfraPipeline('keda', 'sbox', 'sbox') {
+withParameterizedInfraPipeline('keda', 'sandbox', 'sandbox') {
     expires(expiresAfter)
 }
