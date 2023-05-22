@@ -9,6 +9,7 @@ resource "azurerm_user_assigned_identity" "managed_identity" {
 
 locals {
   mgmt_env = ( var.env == "sandbox") ? "sdssbox-intsvc" : "sdsptl-intsvc"
+  rg_name = var.env == "sandbox" ? "ptlsbox" : "ptl"
 }
 
 resource "azurerm_user_assigned_identity" "mgmt_managed_identity" {
@@ -17,7 +18,7 @@ resource "azurerm_user_assigned_identity" "mgmt_managed_identity" {
 
   provider = azurerm.mgmt
 
-  resource_group_name = "managed-identities-${local.mgmt_env}-rg"
+  resource_group_name = "managed-identities-${local.rg_name}-rg"
   location            = var.location
 
   name = "${var.product}-${local.mgmt_env}-mi"
