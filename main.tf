@@ -8,12 +8,12 @@ resource "azurerm_user_assigned_identity" "managed_identity" {
 }
 
 locals {
-  mgmt_env = ( var.env == "ptlsbox") ? "sdssbox-intsvc" : "sdsptl-intsvc"
+  mgmt_env = ( var.env == "sandbox") ? "sdssbox-intsvc" : "sdsptl-intsvc"
 }
 
 resource "azurerm_user_assigned_identity" "mgmt_managed_identity" {
 
-  count = (var.env == "ptlsbox" || var.env == "ptl" ) ? 1 : 0
+  count = (var.env == "sandbox" || var.env == "prod" ) ? 1 : 0
 
   provider = azurerm.mgmt
 
