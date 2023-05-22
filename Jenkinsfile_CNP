@@ -9,4 +9,4 @@ withInfraPipeline(product) {
     syncBranchesWithMaster(branchesToSync)
     expires(expiresAfter)
 }
- 
+
