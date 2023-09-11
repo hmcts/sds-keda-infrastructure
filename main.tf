@@ -8,7 +8,7 @@ resource "azurerm_user_assigned_identity" "managed_identity" {
 }
 
 locals {
-  mgmt_env = var.env == "sandbox" ? "ptlsbox" : "ptl"
+  mgmt_env = var.env == "sbox" ? "ptlsbox" : "ptl"
 }
 
 resource "azurerm_user_assigned_identity" "mgmt_managed_identity" {
