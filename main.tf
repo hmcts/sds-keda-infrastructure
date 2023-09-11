@@ -13,7 +13,7 @@ locals {
 
 resource "azurerm_user_assigned_identity" "mgmt_managed_identity" {
 
-  count = (var.env == "sandbox" || var.env == "prod" ) ? 1 : 0
+  count = (var.env == "sbox" || var.env == "prod" ) ? 1 : 0
 
   provider = azurerm.mgmt
 
